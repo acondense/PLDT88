@@ -40,10 +40,10 @@ def send(recipient_id, message):
 
         action = data['result']['action']
 
-        print action
+        print 'Action(agent.py): ', action
 
         # Call the action
-        dispatch.actions[action](recipient_id, data)
+        dispatch.action[action](recipient_id, data)
 
     except:
         logging.exception('')
