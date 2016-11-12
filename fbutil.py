@@ -69,7 +69,7 @@ def send_file(recipient_id, file_url):
         print str(r.status_code)
         print str(r.text)
 
-def send_link(recipient_id, text):
+def send_link(recipient_id, text, url):
     params = {
         "access_token": os.environ["PAGE_ACCESS_TOKEN"]
     }
@@ -80,8 +80,20 @@ def send_link(recipient_id, text):
         "recipient": {
             "id": recipient_id
         },
-        "message": {
-            "text": message_text
+        "message":{
+            "attachment":{
+              "type":"template",
+              "payload":{
+                "template_type":"button",
+                "text":"What do you want to do next?",
+                "buttons":[
+                  {
+                    "type":"web_url",
+                    "url": url,
+                    "title": text
+                  }
+                ]
+            }
         }
     })
     r = requests.post("https://graph.facebook.com/v2.6/me/messages", params=params, headers=headers, data=data)
