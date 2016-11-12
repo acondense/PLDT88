@@ -54,7 +54,7 @@ def send_recent_bill(recipient_id, data):
 
 # tell product
 def tell_product(recepient_id, data):
-     fbutil.send_bubbles(recipient_id)
+    fbutil.send_bubbles(recipient_id)
 
     data = json.dumps({
         "recipient": {
