@@ -4,11 +4,13 @@ DISPATCH FUNCTIONS
 
 import actions
 import postbacks
+import fbutil
 
 # refer to actions.py
 action = {
     'showBestProduct': actions.show_best_product,
-    'sendRecentBill': actions.send_recent_bill
+    'sendRecentBill': actions.send_recent_bill,
+    'input.unknown': actions.uknown
 }
 
 postback = {
