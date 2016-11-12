@@ -20,7 +20,7 @@ postback = {
     'welcome': postbacks.welcome,
     'welcome_yes': postbacks.welcome_yes,
     'welcome_no': postbacks.welcome_no,
-    'promo_1' : actions.promo_1,
-    'promo_2' : actions.promo_2,
-    'promo_3' : acitons.promo_3
+    'promo_1' : postbacks.promo_1,
+    'promo_2' : postbacks.promo_2,
+    'promo_3' : postbacks.promo_3
 }
