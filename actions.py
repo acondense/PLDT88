@@ -53,7 +53,7 @@ def send_recent_bill(recipient_id, data):
     utils.post_messenger(data)
 
 # tell product
-def tell_product(recepient_id, data){
+def tell_product(recepient_id, data)
      fbutil.send_bubbles(recipient_id)
 
     data = json.dumps({
@@ -89,4 +89,3 @@ def tell_product(recepient_id, data){
     })
 
     utils.post_messenger(data)
-}
