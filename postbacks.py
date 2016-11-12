@@ -8,7 +8,7 @@ when button is click
 import utils
 
 # action to take upon the bot click on get started
-def welcome():
+def welcome(recipient_id):
     data = json.dumps({
         "recipient": {
             "id": recipient_id
