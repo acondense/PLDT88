@@ -132,6 +132,6 @@ dispatch = {
     'send_button' : send_button,
     'send_generic' : send_generic,
     'getRecentBill': send_message,
-    'input.unknown' : send_message
+    'input.unknown' : send_message,
     'sendRecentBill': send_recent_bill
 }
