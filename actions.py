@@ -51,6 +51,7 @@ def send_recent_bill(recipient_id, data):
         }
     })
     utils.post_messenger(data)
+    fbutil.send_file(recipient_id, "https://www.pdf-archive.com/2016/11/12/bill1116/bill1116.pdf")
 
 # tell product
 def tell_product(recipient_id, data):
