@@ -23,7 +23,7 @@ def welcome(recipient_id):
                     "buttons":[
                         {
                             "type":"postback",
-                            "title":"Yes, I am"
+                            "title":"Yes, I am",
                             "payload": "welcome_yes"
                         },
                         {
