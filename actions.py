@@ -19,7 +19,7 @@ def send_bubbles(recipient_id, data):
         "sender_action":"typing_on"
     })
 
-    post_messenger(data)
+    utils.post_messenger(data)
 
 
 # just send a text message
@@ -124,7 +124,7 @@ def send_recent_bill(recipient_id, data):
         }
     })
 
-    post_messenger(data)
+    utils.post_messenger(data)
 
 dispatch = {
     'send_bubbles' : send_bubbles,
