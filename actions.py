@@ -98,6 +98,6 @@ def check_status(recipient_id, data):
     # check if users area is still active
     fbutil.send_message(recipient_id, "Hi, we are currently doing an infrastructure upgrade in your area")
     fbutil.send_bubbles(recipient_id)
-    fbutil.send_message(recipient_id, "Expect the connectioin to be back after 8 hrs")
+    fbutil.send_message(recipient_id, "Expect the connection to be back in 8 hrs")
 
     # the user account is active and the area is okay suggest trouble shooting
