@@ -24,13 +24,10 @@ def set_welcome():
         "Content-Type": "application/json"
     }
     data = json.dumps({
-        "setting_type":"call_to_actions",
-                "thread_state":"new_thread",
-                "call_to_actions":[
-                    {
-                        "payload":"USER_DEFINED_PAYLOAD"
-                    }
-                ]
+        "setting_type":"greeting",
+        "greeting":{
+            "text":"Hi {{user_first_name}}, welcome to this bot."
+        }
     })
 
     r = requests.post("https://graph.facebook.com/v2.6/me/thread_settings", params=params, headers=headers, data=data)
