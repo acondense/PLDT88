@@ -17,5 +17,5 @@ action = {
 }
 
 postback = {
-    'WELCOME': postbacks.welcome
+    'welcome': postbacks.welcome
 }
