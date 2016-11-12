@@ -22,7 +22,7 @@ def welcome(recipient_id):
                 "type":"template",
                 "payload":{
                     "template_type":"button",
-                    "text":"What do you want to do next?",
+                    "text":"Hi i am the PLDT bot I am created to enhance your customer experience. Are you an existing PLDT customer?",
                     "buttons":[
                         {
                             "type":"postback",
