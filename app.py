@@ -109,7 +109,7 @@ def webhook():
                         print "POST BACK RECEIVED"
                         # fbsample.send_message(sender_id, "MUST GET VALUE OF POST BACK app.py line107")
                         postback = messaging_event["postback"]["payload"]
-                        dispatch.postback[postback]
+                        dispatch.postback[postback]()
                     except:
                         print "Unable to process"
                         log(data)
