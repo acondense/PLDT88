@@ -3,6 +3,8 @@
 import json
 import requests
 
+import logging 
+
 import utils
 
 # image url is too long, better to assign it on a variable

@@ -3,6 +3,7 @@ import sys
 import json
 
 import actions
+import logging
 
 try:
     import apiai
