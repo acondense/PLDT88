@@ -1,17 +1,19 @@
+import os
 import psycopg2
+import urlparse
 
-conn = psycopg2.connect(database="testdb", user="postgres", password="pass123", host="127.0.0.1", port="5432")
-print "Opened database successfully"
+import logging
 
-cur = conn.cursor()
+urlparse.uses_netloc.append("postgres")
+url = urlparse.urlparse(os.environ["DATABASE_URL"])
 
-cur.execute("SELECT id, name, address, salary  from COMPANY")
-rows = cur.fetchall()
-for row in rows:
-   print "ID = ", row[0]
-   print "NAME = ", row[1]
-   print "ADDRESS = ", row[2]
-   print "SALARY = ", row[3], "\n"
-
-print "Operation done successfully";
-conn.close()
+try:
+    conn = psycopg2.connect(
+        database=url.path[1:],
+        user=url.username,
+        password=url.password,
+        host=url.hostname,
+        port=url.port
+    )
+except:
+    logging.exception('')
