@@ -8,24 +8,6 @@ import utils
 # image url is too long, better to assign it on a variable
 image_url = 'http://cdn.iflscience.com/images/4a2006cf-753a-5617-8385-8c18ef36590c/large-1464855882-10-harambe-the-gorilla-put-zoo-in-a-lose-lose-situation-by-being-himself.jpg'
 
-#
-def send_recent_bill(recipient_id, data):
-
-    send_bubbles(recipient_id, data)
-
-    data = json.dumps({
-        "recipient": {
-            "id": recipient_id
-        },
-        "message": {
-            "text": data['result']['fulfillment']['speech']
-        }
-    })
-
-    post_messenger(data)
-
-
-
 # send a chatting bubble indicator
 def send_bubbles(recipient_id, data):
     data = json.dumps({
@@ -125,6 +107,22 @@ def send_generic(recipient_id, data):
         }
     })
     utils.post_messenger(data)
+
+#
+def send_recent_bill(recipient_id, data):
+
+    send_bubbles(recipient_id, data)
+
+    data = json.dumps({
+        "recipient": {
+            "id": recipient_id
+        },
+        "message": {
+            "text": data['result']['fulfillment']['speech']
+        }
+    })
+
+    post_messenger(data)
 
 dispatch = {
     'send_bubbles' : send_bubbles,
