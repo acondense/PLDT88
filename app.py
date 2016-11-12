@@ -23,8 +23,9 @@ import dispatch
 Set up the bot
 """
 try:
-    setup.set_welcome_text()
-    setup.set_get_started_button()
+    # setup.set_welcome_text()
+    # setup.set_get_started_button()
+    print "Just commented the setup app.py line28"
 except:
     logging.exception('')
 
