@@ -164,7 +164,18 @@ def troubleshoot(recipient_id, data):
     })
     utils.post_messenger(data)
 
-    
+def trblsht_yes(recipient_id):
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "I'm sorry to hear that. We are going record this report and give you file ticket number to track it.")
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "Thank you for reporting this. We are making it to the extent of our best to resolve your problem. Here is your file ticket number: 0000000000")
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "Have a nice day!")
+
+def trblsht_no(recipient_id):
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "It seems that we don't have any problem with your connection anymore. Thank you for your participation.")
+
 
 
     
