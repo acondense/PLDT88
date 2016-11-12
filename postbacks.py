@@ -7,6 +7,8 @@ when button is click
 
 import utils
 import json
+import datetime
+import random
 
 #helper
 import fbutil
@@ -83,12 +85,17 @@ def promo_3(recipient_id):
     fbutil.send_message(recipient_id, "Installation is free an no cash out.")
     fbutil.send_bubbles(recipient_id)
     fbutil.send_link(recipient_id, "Apply now by following this link","https://shop.pldthome.com/Home/UlteraCoverageChecking?planId=1950", "Apply")
- 
+
 def trblsht_yes(recipient_id):
+    now = datetime.datetime.now()
+    strDate = now.strftime("%Y%m%d")
+    ranStr = strDate.join(random.choice(string.ascii_uppercase) for _ in range(6))
+
+
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "I'm sorry to hear that. We are going record this report and give you file ticket number to track it.")
     fbutil.send_bubbles(recipient_id)
-    fbutil.send_message(recipient_id, "Thank you for reporting this. We are making it to the extent of our best to resolve your problem. Here is your file ticket number: 0000000000")
+    fbutil.send_message(recipient_id, "Thank you for reporting this. We are making it to the extent of our best to resolve your problem. Here is your file ticket number: ")
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "Have a nice day!")
 
