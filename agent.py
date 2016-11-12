@@ -27,7 +27,7 @@ def send(recipient_id, message):
     request.query = message
 
 
-    try 
+    try:
         response = request.getresponse()
 
         data = json.loads(response.read())
