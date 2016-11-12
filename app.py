@@ -1,12 +1,22 @@
 import os
 import sys
 import json
+import logging
 
 import requests
 from flask import Flask, request
 
 import fbsample # local file will serve as a reference
 import agent
+
+
+import utils
+
+try:
+    utils.set_welcome()
+except:
+    logging.exception('')
+
 
 app = Flask(__name__)
 
