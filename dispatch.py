@@ -24,5 +24,7 @@ postback = {
     'welcome_no': postbacks.welcome_no,
     'promo_1' : postbacks.promo_1,
     'promo_2' : postbacks.promo_2,
-    'promo_3' : postbacks.promo_3
+    'promo_3' : postbacks.promo_3,
+    'trblsht_yes' : postbacks.trblsht_yes,
+    'trblsht_no' : postbacks.trblsht_no
 }
