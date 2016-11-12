@@ -13,7 +13,7 @@ except ImportError:
     import apiai
 
 # CLIENT_ACCESS_TOKEN = 'YOUR_ACCESS_TOKEN'
-CLIENT_ACCESS_TOKEN = 'a7f19d2cb95d4dabb88278146c68fd73'
+CLIENT_ACCESS_TOKEN = 'd6aa459a69f343b29221684599ebbc62'
 
 def send(recipient_id, message):
     ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN)
@@ -26,13 +26,16 @@ def send(recipient_id, message):
 
     request.query = message
 
-    response = request.getresponse()
 
-    data = json.loads(response.read())
+    try 
+        response = request.getresponse()
 
-    action = data['result']['action']
+        data = json.loads(response.read())
 
-    # Call the action
-    actions.dispatch[action](recipient_id, data)
+        action = data['result']['action']
 
-    print 'ACTION!!!!', action
+        # Call the action
+        actions.dispatch[action](recipient_id, data)
+
+    except:
+        print 'API.AI Call failed on message: ', message
