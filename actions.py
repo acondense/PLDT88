@@ -125,13 +125,3 @@ def send_recent_bill(recipient_id, data):
     })
 
     utils.post_messenger(data)
-
-dispatch = {
-    'send_bubbles' : send_bubbles,
-    'send_message' : send_message,
-    'send_button' : send_button,
-    'send_generic' : send_generic,
-    'getRecentBill': send_message,
-    'input.unknown' : send_message,
-    'sendRecentBill': send_recent_bill
-}

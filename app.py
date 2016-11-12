@@ -6,14 +6,25 @@ import logging
 import requests
 from flask import Flask, request
 
-import fbsample # local file will serve as a reference
+# API ai
 import agent
 
 
 import utils
+import setup
 
+# helper
+import fbsample
+
+# for postback
+import dispatch
+
+"""
+Set up the bot
+"""
 try:
-    utils.set_welcome()
+    setup.set_welcome_text()
+    setup.set_get_started_button()
 except:
     logging.exception('')
 
@@ -29,7 +40,7 @@ def verify():
             return "Verification token mismatch", 403
         return request.args["hub.challenge"], 200
 
-    return "Alan Knows!!!!", 200
+    return "PLDT Bot Knows!!!!", 200
 
 
 @app.route('/', methods=['POST'])
@@ -45,8 +56,13 @@ def webhook():
         for entry in data["entry"]:
             for messaging_event in entry["messaging"]:
 
+                """
+                HANDLE MESSAGES HERE
+                """
                 if messaging_event.get("message"):  # someone sent us a message
 
+
+                    """ weird checking """
                     if messaging_event['message'].get('is_echo'):
                         print "An echo returning now"
                         return "ok", 200
@@ -60,39 +76,40 @@ def webhook():
                         return "ok", 200
                     else:
                         print "Not a sticker"
+                    """ end of weird checking """
 
                     try:
                         sender_id = messaging_event["sender"]["id"]        # the facebook ID of the person sending you the message
                         recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                         message_text = messaging_event["message"]["text"]  # the message's text
-
-                        agent.send(sender_id, message_text)
+                        agent.send(sender_id, message_text) # query to api.ai then execute the action
                     
                     except:
-                        print "Unable to process"
-                        log(data)
-                        raise
-                    else:
-                        print "Unable to process"
-                        log(data)
+                        logging.exception('')
 
 
-                if messaging_event.get("delivery"):  # delivery confirmation
+                """
+                HANDLE DELIVERY HERE
+                """
+                elif messaging_event.get("delivery"):  # delivery confirmation
                     pass
 
-                if messaging_event.get("optin"):  # optin confirmation
+                """
+                HANLDE OPTIN HERE
+                """
+                elif messaging_event.get("optin"):  # optin confirmation
                     pass
 
-                if messaging_event.get("postback"):  # user clicked/tapped "postback" button in earlier message
+                """
+                HANDLE POSTBACK HERE - postback are button clicks
+                """
+                elif messaging_event.get("postback"):  # user clicked/tapped "postback" button in earlier message
                     try:
                         sender_id = messaging_event["sender"]["id"]
                         print "POST BACK RECEIVED"
-                        fbsample.send_message(sender_id, "POST BACK RECEIVED")
+                        fbsample.send_message(sender_id, "MUST GET VALUE OF POST BACK app.py line107")
+                        # dispatch.postbacks['postback']
                     except:
-                        print "Unable to process"
-                        log(data)
-                        raise
-                    else:
                         print "Unable to process"
                         log(data)
 

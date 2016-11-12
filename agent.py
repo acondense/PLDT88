@@ -5,6 +5,10 @@ import json
 import actions
 import logging
 
+# actions to be executed by the bot
+# refer to actions.py
+import dispatch
+
 try:
     import apiai
 except ImportError:
@@ -39,7 +43,7 @@ def send(recipient_id, message):
         print action
 
         # Call the action
-        actions.dispatch[action](recipient_id, data)
+        dispatch.actions.[action](recipient_id, data)
 
     except:
         logging.exception('')
