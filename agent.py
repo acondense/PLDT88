@@ -26,6 +26,7 @@ def send(recipient_id, message):
 
     request.query = message
 
+    print '\nSending to', recipient_id, ' : ' , message, '\n' 
 
     try:
         response = request.getresponse()
