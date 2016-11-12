@@ -10,7 +10,7 @@ import fbutil
 action = {
     'showBestProduct': actions.show_best_product,
     'sendRecentBill': actions.send_recent_bill,
-    'input.unknown': actions.uknown
+    'input.unknown': actions.unknown
 }
 
 # on button click
