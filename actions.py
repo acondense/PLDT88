@@ -74,3 +74,5 @@ def check_status(recipient_id, data):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "Expect the connectioin to be back after 8 hrs")
 
+    # the user account is active and the area is okay suggest trouble shooting
+
