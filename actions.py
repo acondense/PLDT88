@@ -10,7 +10,7 @@ import utils
 import fbutil
 
 # show best product
-def show_best_product(recipient_id, data)
+def show_best_product(recipient_id, data):
     fbutil.send_bubbles(recipient_id)
     data = json.dumps({
         "recipient": {
