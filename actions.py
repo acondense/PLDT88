@@ -25,6 +25,7 @@ def unknown(recipient_id, data):
 # show best product
 def show_best_product(recipient_id, data):
     fbutil.send_bubbles(recipient_id)
+    
     data = json.dumps({
         "recipient": {
             "id": recipient_id
@@ -33,6 +34,7 @@ def show_best_product(recipient_id, data):
             "text": data['result']['fulfillment']['speech']
         }
     })
+
     utils.post_messenger(data)
 
 # send recent bill
@@ -48,5 +50,43 @@ def send_recent_bill(recipient_id, data):
             "text": data['result']['fulfillment']['speech']
         }
     })
+    utils.post_messenger(data)
+
+# tell product
+def tell_product(recepient_id, data){
+     fbutil.send_bubbles(recipient_id)
+
+    data = json.dumps({
+        "recipient": {
+            "id": recipient_id
+        },
+        "message":{
+            "attachment":{
+                "type":"template",
+                "payload":{
+                    "template_type":"button",
+                    "text":"Okay. Which product are you interested about?",
+                    "buttons":[
+                        {
+                            "type":"postback",
+                            "title":"PLDT HOME FIBR PLAN 2899",
+                            "payload": "promo_1"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"SPEEDSTER PLAN 1299",
+                            "payload":"promo_2"
+                        },
+                         {
+                            "type":"postback",
+                            "title":"FUN PLAN 699",
+                            "payload":"promo_3"
+                        }
+                    ]
+                }
+            }
+        }
+    })
 
     utils.post_messenger(data)
+}

@@ -54,3 +54,15 @@ def welcome_yes(recipient_id):
 def welcome_no(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "I will ask you some question to recommend the best pldt product that will suite you.")
+
+#postback for promo_1
+def promo_1(recipient_id)
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "The new Power Plus Plan 2899 comes with up to 50 MBPS internet speed with no data cap.")
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "It also comes with iflix and FOX Networks Group.")
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "Apply now by following this link https://shop.pldthome.com/Home/AreaCoverage?planId=1636")
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "Or upgrade your current subscription instead by following this link https://shop.pldthome.com/Home/BufferPage?planId=1637&transaction=Upgrade&addOnId=-1")
+    
