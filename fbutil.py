@@ -99,4 +99,30 @@ def send_link(recipient_id, text, url, action):
     if r.status_code != 200:
         print str(r.status_code)
         print str(r.text)
-# def send_image(recipient_id, image_url):
+
+def send_image(recipient_id, image_url, text):
+    params = {
+        "access_token": os.environ["PAGE_ACCESS_TOKEN"]
+    }
+    headers = {
+        "Content-Type": "application/json"
+    }
+    data = json.dumps({
+        "recipient": {
+            "id": recipient_id
+        },
+        "message":{
+            "attachment":{
+                "type":"image",
+                "payload":{
+                    "text": text,
+                    "url": image_url
+                }
+            }
+        }
+    })
+    r = requests.post("https://graph.facebook.com/v2.6/me/messages", params=params, headers=headers, data=data)
+    if r.status_code != 200:
+        print str(r.status_code)
+        print str(r.text)
+

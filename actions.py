@@ -92,6 +92,7 @@ def tell_product(recipient_id, data):
 
 def check_status(recipient_id, data):
     # check the user status here assume that he is conneted
+    fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "All right i checked that your service is active")
     fbutil.send_bubbles(recipient_id)
 
@@ -101,3 +102,9 @@ def check_status(recipient_id, data):
     fbutil.send_message(recipient_id, "Expect the connection to be back in 8 hrs")
 
     # the user account is active and the area is okay suggest trouble shooting
+
+def troubleshoot(recipient_id, data):
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "This is a troubleshooting guide for those who are experiencing a slow internet connection. Please follow every step that I will give.")
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_image(recipient_id, "http://www.centurylink.com/help/images/uploads/194_wiredconnection.png","First, Connect a computer to the modem with an Ethernet cable as shown below.")
