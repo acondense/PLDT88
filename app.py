@@ -14,7 +14,7 @@ import utils
 import setup
 
 # helper
-import fbsample
+import fbutil
 
 # for postback
 import dispatch 
@@ -113,7 +113,7 @@ def webhook():
                         dispatch.postback[postback](sender_id)
                     except:
                         logging.exception('')
-                        
+
     return "ok", 200
 
 def log(message):  # simple wrapper for logging to stdout on heroku
