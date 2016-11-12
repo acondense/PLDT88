@@ -34,6 +34,8 @@ def send(recipient_id, message):
 
         action = data['result']['action']
 
+        print action
+
         # Call the action
         actions.dispatch[action](recipient_id, data)
 
