@@ -17,7 +17,7 @@ import setup
 import fbsample
 
 # for postback
-import dispatch
+import dispatch 
 
 """
 Set up the bot
@@ -91,19 +91,19 @@ def webhook():
                 """
                 HANDLE DELIVERY HERE
                 """
-                elif messaging_event.get("delivery"):  # delivery confirmation
+                if messaging_event.get("delivery"):  # delivery confirmation
                     pass
 
                 """
                 HANLDE OPTIN HERE
                 """
-                elif messaging_event.get("optin"):  # optin confirmation
+                if messaging_event.get("optin"):  # optin confirmation
                     pass
 
                 """
                 HANDLE POSTBACK HERE - postback are button clicks
                 """
-                elif messaging_event.get("postback"):  # user clicked/tapped "postback" button in earlier message
+                if messaging_event.get("postback"):  # user clicked/tapped "postback" button in earlier message
                     try:
                         sender_id = messaging_event["sender"]["id"]
                         print "POST BACK RECEIVED"
