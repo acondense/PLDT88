@@ -26,8 +26,8 @@ def set_welcome():
     data = json.dumps({
         "setting_type":"greeting",
         "greeting":{
-            "text":"Hi {{user_first_name}}, welcome to this bot."
-        }
+            "text":"Hi {{user_first_name}}, I am the PLDT bot. Create to serve you."
+                }
     })
 
     r = requests.post("https://graph.facebook.com/v2.6/me/thread_settings", params=params, headers=headers, data=data)
