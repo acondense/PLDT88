@@ -69,7 +69,7 @@ def tell_product(recepient_id, data):
                     "buttons":[
                         {
                             "type":"postback",
-                            "title":"PLDT HOME FIBR PLAN 2899",
+                            "title":"Home Fiber Plan 2899",
                             "payload": "promo_1"
                         },
                         {
