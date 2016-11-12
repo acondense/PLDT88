@@ -82,17 +82,16 @@ def send_link(recipient_id, text, url):
         },
         "message":{
             "attachment":{
-              "type":"template",
-              "payload":{
-                "template_type":"button",
-                "text":"What do you want to do next?",
-                "buttons":[
-                  {
-                    "type":"web_url",
-                    "url": url,
-                    "title": text
-                  }
-                ]
+                "type":"template",
+                "payload":{
+                    "template_type":"button",
+                    "text":"What do you want to do next?",
+                    "buttons":[{
+                        "type":"web_url",
+                        "url": url,
+                        "title": text
+                    }]
+                }
             }
         }
     })
