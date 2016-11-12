@@ -94,7 +94,7 @@ def webhook():
                     if messaging_event['message'].get('sticker_id'):
                         print "Thanks for the sticker"
                         sender_id = messaging_event["sender"]["id"]
-                        futil.send_message(sender_id, "Thanks for the sticker")
+                        fbutil.send_image(sender_id, "http://65.media.tumblr.com/803e3d373d71db16c6eadeca0b208cf1/tumblr_nj6n4ny6jV1qa3dmso1_500.jpg")
                         return "ok", 200
                     else:
                         print "Not a sticker"
