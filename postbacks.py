@@ -52,6 +52,35 @@ def welcome_yes(recipient_id):
     fbutil.send_message(recipient_id, "I am created to enhance your customer experience.")
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "You can ask me anything about PLDT")
+    data = json.dumps({
+        "recipient": {
+            "id": recipient_id
+        },
+        "message":{
+            "attachment":{
+                "type":"template",
+                "payload":{
+                    "template_type":"button",
+                    "text":"Would you like to link your PLDT Account with me?",
+                    "buttons":[
+                        {
+                            "type":"web_url",
+                            "url":"https://petersfancyapparel.com/criteria_selector",
+                            "title":"Yes, Link it",
+                            "webview_height_ratio": "tall"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"Not now.",
+                            "payload":"not_now"
+                        }
+                    ]
+                }
+            }
+        }
+    })
+
+    utils.post_messenger(data)
 
 # postback if yes is clicked on welcome
 def welcome_no(recipient_id):
