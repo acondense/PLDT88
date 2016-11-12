@@ -5,6 +5,9 @@ import json
 import actions
 import logging
 
+# helper
+import fbutil
+
 # actions to be executed by the bot
 # refer to actions.py
 import dispatch
@@ -43,7 +46,11 @@ def send(recipient_id, message):
         print 'Action(agent.py): ', action
 
         # Call the action
-        dispatch.action[action](recipient_id, data)
+        if action == "":
+            speech = data['result']['fulfillment']['speech']
+            fbutil.send_message(recipient_id, speech)
+        else:
+            dispatch.action[action](recipient_id, data)
 
     except:
         logging.exception('')
