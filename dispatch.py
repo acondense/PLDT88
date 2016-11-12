@@ -17,5 +17,7 @@ action = {
 }
 
 postback = {
-    'welcome': postbacks.welcome
+    'welcome': postbacks.welcome,
+    'welcome_yes': postbacks.welcome_yes,
+    'welcome_no': postbacks.welcome_no
 }
