@@ -14,7 +14,8 @@ action = {
     'checkStatus': actions.check_status,
     'troubleshootSlowConnection': actions.troubleshoot,
     'input.unknown': actions.unknown,
-    'troubleshoot' : actions.troubleshoot
+    'troubleshoot' : actions.troubleshoot,
+    'tagUser' : actions.tagUser
 }
 
 # on button click

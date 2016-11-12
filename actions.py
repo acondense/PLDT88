@@ -165,6 +165,10 @@ def troubleshoot(recipient_id, data):
     })
     utils.post_messenger(data)
 
+def tagUser(recipient_id, data):
+    fbutil.send_bubbles(recipient_id)
+    print data['result']['fulfillment']['speech']
+    print recipient_id
 
 
 
