@@ -56,7 +56,7 @@ def welcome_no(recipient_id):
     fbutil.send_message(recipient_id, "I will ask you some question to recommend the best pldt product that will suite you.")
 
 #postback for promo_1
-def promo_1(recipient_id)
+def promo_1(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "The new Power Plus Plan 2899 comes with up to 50 MBPS internet speed with no data cap.")
     fbutil.send_bubbles(recipient_id)
@@ -66,7 +66,7 @@ def promo_1(recipient_id)
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "Or upgrade your current subscription instead by following this link https://shop.pldthome.com/Home/BufferPage?planId=1637&transaction=Upgrade&addOnId=-1")
     
-def promo_2(recipient_id)
+def promo_2(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "The new Speedster Plan 1899 comes with up to 10 MBPS and 50 GB monthly volume allowance.")
     fbutil.send_bubbles(recipient_id)
@@ -76,7 +76,7 @@ def promo_2(recipient_id)
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "Or upgrade your current subscription instead by following this link https://shop.pldthome.com/Home/BufferPage?planId=1741&transaction=Upgrade&addOnId=-1")
  
- def promo_3(recipient_id)
+ def promo_3(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "The new Fun Plan 699 comes with up to 3 MBPS at 30 GB monthly volume allowance.")
     fbutil.send_bubbles(recipient_id)
