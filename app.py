@@ -94,7 +94,7 @@ def webhook():
                     if messaging_event['message'].get('sticker_id'):
                         print "Thanks for the sticker"
                         sender_id = messaging_event["sender"]["id"]
-                        futil.send_message(sender_id, "Thanks for the sticker")
+                        fbutil.send_message(sender_id, "Thanks for the sticker")
                         return "ok", 200
                     else:
                         print "Not a sticker"
