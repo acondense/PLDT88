@@ -69,7 +69,7 @@ def send_file(recipient_id, file_url):
         print str(r.status_code)
         print str(r.text)
 
-def send_link(recipient_id, text, url):
+def send_link(recipient_id, text, url, action):
     params = {
         "access_token": os.environ["PAGE_ACCESS_TOKEN"]
     }
@@ -85,11 +85,11 @@ def send_link(recipient_id, text, url):
                 "type":"template",
                 "payload":{
                     "template_type":"button",
-                    "text":"What do you want to do next?",
+                    "text": text,
                     "buttons":[{
                         "type":"web_url",
                         "url": url,
-                        "title": text
+                        "title": action
                     }]
                 }
             }

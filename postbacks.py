@@ -62,9 +62,9 @@ def promo_1(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "It also comes with iflix and FOX Networks Group.")
     fbutil.send_bubbles(recipient_id)
-    fbutil.send_link(recipient_id, "Apply now by following this link","https://shop.pldthome.com/Home/AreaCoverage?planId=1636")
+    fbutil.send_link(recipient_id, "Apply now by following this link","https://shop.pldthome.com/Home/AreaCoverage?planId=1636", "Apply")
     fbutil.send_bubbles(recipient_id)
-    fbutil.send_link(recipient_id, "Or upgrade your current subscription instead by following this link","https://shop.pldthome.com/Home/BufferPage?planId=1637&transaction=Upgrade&addOnId=-1")
+    fbutil.send_link(recipient_id, "Or upgrade your current subscription instead by following this link","https://shop.pldthome.com/Home/BufferPage?planId=1637&transaction=Upgrade&addOnId=-1", "Upgrade")
 
 def promo_2(recipient_id):
     fbutil.send_bubbles(recipient_id)
@@ -72,9 +72,9 @@ def promo_2(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "It also comes with a landline.")
     fbutil.send_bubbles(recipient_id)
-    fbutil.send_link(recipient_id, "Apply now by following this link", "https://shop.pldthome.com/Home/AreaCoverage?planId=1740")
+    fbutil.send_link(recipient_id, "Apply now by following this link", "https://shop.pldthome.com/Home/AreaCoverage?planId=1740", "Apply")
     fbutil.send_bubbles(recipient_id)
-    fbutil.send_link(recipient_id, "Or upgrade your current subscription instead by following this link","https://shop.pldthome.com/Home/BufferPage?planId=1741&transaction=Upgrade&addOnId=-1")
+    fbutil.send_link(recipient_id, "Or upgrade your current subscription instead by following this link","https://shop.pldthome.com/Home/BufferPage?planId=1741&transaction=Upgrade&addOnId=-1", "Upgrade")
  
 def promo_3(recipient_id):
     fbutil.send_bubbles(recipient_id)
@@ -82,5 +82,5 @@ def promo_3(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "Installation is free an no cash out.")
     fbutil.send_bubbles(recipient_id)
-    fbutil.send_link(recipient_id, "Apply now by following this link","https://shop.pldthome.com/Home/UlteraCoverageChecking?planId=1950")
+    fbutil.send_link(recipient_id, "Apply now by following this link","https://shop.pldthome.com/Home/UlteraCoverageChecking?planId=1950", "Apply")
  
