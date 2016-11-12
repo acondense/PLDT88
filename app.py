@@ -73,7 +73,7 @@ def webhook():
                     if messaging_event['message'].get('sticker_id'):
                         print "Thanks for the sticker"
                         sender_id = messaging_event["sender"]["id"]
-                        fbsample.send_message(sender_id, "Thanks for the sticker")
+                        futil.send_message(sender_id, "Thanks for the sticker")
                         return "ok", 200
                     else:
                         print "Not a sticker"
@@ -108,7 +108,7 @@ def webhook():
                     try:
                         sender_id = messaging_event["sender"]["id"]
                         print "POST BACK RECEIVED"
-                        # fbsample.send_message(sender_id, "MUST GET VALUE OF POST BACK app.py line107")
+                        # futil.send_message(sender_id, "MUST GET VALUE OF POST BACK app.py line107")
                         postback = messaging_event["postback"]["payload"]
                         dispatch.postback[postback](sender_id)
                     except:
