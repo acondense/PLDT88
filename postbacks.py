@@ -88,7 +88,7 @@ def promo_3(recipient_id):
 
 def trblsht_yes(recipient_id):
     now = datetime.datetime.now()
-    strDate = strr(now.strftime("%Y%m%d"))
+    strDate = str(now.strftime("%Y%m%d"))
     output = "Thank you for reporting this. We are making it to the extent of our best to resolve your problem. Here is your file ticket number: " + strDate + ''.join(random.choice(string.ascii_uppercase) for _ in range(6))
 
 
