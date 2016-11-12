@@ -167,8 +167,11 @@ def troubleshoot(recipient_id, data):
 
 def tagUser(recipient_id, data):
     fbutil.send_bubbles(recipient_id)
+
     print data['result']['parameters']['account-number']
     print recipient_id
+
+    fbutil.send_message(recipient_id, "Hey there Juan! It's nice to have you. As I have said earlier, I am your PLDT bot. Created to delight your customer experience with PLDT. You may receive your bills, send your questions, suggestions and even complaints in the most easiest way all in one place thru messenger.")
 
 
 
