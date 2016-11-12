@@ -50,3 +50,6 @@ def send_recent_bill(recipient_id, data):
     })
 
     utils.post_messenger(data)
+
+
+    fbutil.send_file(recipient_id, "https://cr.yp.to/snuffle/bruteforce-20050425.pdf")
