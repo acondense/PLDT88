@@ -95,7 +95,7 @@ def trblsht_yes(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "I'm sorry to hear that. We are going record this report and give you file ticket number to track it.")
     fbutil.send_bubbles(recipient_id)
-    fbutil.send_message(recipient_id, ")
+    fbutil.send_message(recipient_id, output)
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "Have a nice day!")
 
