@@ -115,7 +115,6 @@ def send_image(recipient_id, image_url, text):
             "attachment":{
                 "type":"image",
                 "payload":{
-                    "text": text,
                     "url": image_url
                 }
             }
