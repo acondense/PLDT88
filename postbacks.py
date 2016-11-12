@@ -6,6 +6,7 @@ when button is click
 """
 
 import utils
+import json
 
 # action to take upon the bot click on get started
 def welcome(recipient_id):
