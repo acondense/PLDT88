@@ -43,7 +43,7 @@ def send(recipient_id, message):
         print action
 
         # Call the action
-        dispatch.actions.[action](recipient_id, data)
+        dispatch.actions[action](recipient_id, data)
 
     except:
         logging.exception('')
