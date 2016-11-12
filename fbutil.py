@@ -43,5 +43,4 @@ def send_message(recipient_id, message_text):
         print str(r.status_code)
         print str(r.text)
 
-def send_image(recipient_id, image_url):
-    
+# def send_image(recipient_id, image_url):
