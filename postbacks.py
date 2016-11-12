@@ -84,3 +84,16 @@ def promo_3(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_link(recipient_id, "Apply now by following this link","https://shop.pldthome.com/Home/UlteraCoverageChecking?planId=1950", "Apply")
  
+def trblsht_yes(recipient_id):
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "I'm sorry to hear that. We are going record this report and give you file ticket number to track it.")
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "Thank you for reporting this. We are making it to the extent of our best to resolve your problem. Here is your file ticket number: 0000000000")\
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "Have a nice day!")
+
+def trblsht_no(recipient_id):
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "It seems that we don't have any problem with your connection anymore. Thank you for your participation.")
+    
+   

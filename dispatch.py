@@ -13,7 +13,8 @@ action = {
     'tellProduct' : actions.tell_product,
     'checkStatus': actions.check_status,
     'troubleshootSlowConnection': actions.troubleshoot,
-    'input.unknown': actions.unknown
+    'input.unknown': actions.unknown,
+    'troubleshoot' : actions.troubleshoot
 }
 
 # on button click
@@ -23,5 +24,6 @@ postback = {
     'welcome_no': postbacks.welcome_no,
     'promo_1' : postbacks.promo_1,
     'promo_2' : postbacks.promo_2,
-    'promo_3' : postbacks.promo_3
+    'promo_3' : postbacks.promo_3,
+    'trblsht' : postbacks.trblsht
 }

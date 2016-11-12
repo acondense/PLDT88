@@ -135,6 +135,38 @@ def troubleshoot(recipient_id, data):
     fbutil.send_message(recipient_id, "If your speedtest was at at or above the Target Download Speed, then you're receiving your subscribed speed. For example, if you've purchased a CenturyLink Internet package with 1.5 Mbps speed, your Target Download Speed shouldn't be lower than 1.2 Mbps.")
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "Bad wiring can also cause slow connections so you better check it.")
+
+    data = json.dumps({
+        "recipient": {
+            "id": recipient_id
+        },
+        "message":{
+            "attachment":{
+                "type":"template",
+                "payload":{
+                    "template_type":"button",
+                    "text":"Is your internet connection still slow?",
+                    "buttons":[
+                        {
+                            "type":"postback",
+                            "title":"Yes",
+                            "payload": "trblsht_yes"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"No",
+                            "payload":"trblsht_no"
+                        }
+                    ]
+                }
+            }
+        }
+    })
+    utils.post_messenger(data)
+
+    
+
+
     
     
 
