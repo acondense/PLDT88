@@ -12,7 +12,7 @@ action = {
     'sendRecentBill': actions.send_recent_bill,
     'tellProduct' : actions.tell_product,
     'checkStatus': actions.check_status,
-    'troubleshoot-slowConnection': action.troubleshoot,
+    'troubleshoot-slowConnection': actions.troubleshoot,
     'input.unknown': actions.unknown
 }
 
