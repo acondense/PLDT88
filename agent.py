@@ -41,4 +41,5 @@ def send(recipient_id, message):
         actions.dispatch[action](recipient_id, data)
 
     except:
+        logging.exception('')
         print 'API.AI Call failed on message: ', message
