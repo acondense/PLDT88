@@ -74,12 +74,12 @@ def tell_product(recepient_id, data){
                         },
                         {
                             "type":"postback",
-                            "title":"SPEEDSTER PLAN 1299",
+                            "title":"Speedster Plan 1899",
                             "payload":"promo_2"
                         },
                          {
                             "type":"postback",
-                            "title":"FUN PLAN 699",
+                            "title":"Fun Plan 699",
                             "payload":"promo_3"
                         }
                     ]

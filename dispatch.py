@@ -11,7 +11,11 @@ action = {
     'showBestProduct': actions.show_best_product,
     'sendRecentBill': actions.send_recent_bill,
     'tellProduct' : actions.tell_product,
-    'input.unknown': actions.unknown
+    'checkStatus': actions.check_status,
+    'input.unknown': actions.unknown,
+    'promo_1' : actions.promo_1,
+    'promo_2' : actions.promo_2,
+    'promo_3' : acitons.promo_3
 }
 
 # on button click
