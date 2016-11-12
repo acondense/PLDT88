@@ -17,7 +17,7 @@ def unknown(recipient_id, data):
             "id": recipient_id
         },
         "message": {
-            "text": 'data['result']['fulfillment']['speech']'
+            "text": data['result']['fulfillment']['speech']
         }
     })
     utils.post_messenger(data)
