@@ -107,4 +107,6 @@ def troubleshoot(recipient_id, data):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "This is a troubleshooting guide for those who are experiencing a slow internet connection. Please follow every step that I will give.")
     fbutil.send_bubbles(recipient_id)
-    fbutil.send_image(recipient_id, "http://www.centurylink.com/help/images/uploads/194_wiredconnection.png","First, Connect a computer to the modem with an Ethernet cable as shown below.")
+    fbutil.send_message(recipient_id, "First, Connect a computer to the modem with an Ethernet cable as shown below.")
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_image(recipient_id, "http://www.centurylink.com/help/images/uploads/194_wiredconnection.png")

@@ -100,7 +100,7 @@ def send_link(recipient_id, text, url, action):
         print str(r.status_code)
         print str(r.text)
 
-def send_image(recipient_id, image_url, text):
+def send_image(recipient_id, image_url):
     params = {
         "access_token": os.environ["PAGE_ACCESS_TOKEN"]
     }
