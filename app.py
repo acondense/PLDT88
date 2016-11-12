@@ -18,7 +18,7 @@ import fbutil
 
 
 #
-# import os
+"""
 import psycopg2
 import urlparse
 
@@ -35,6 +35,7 @@ try:
     )
 except:
     logging.exception('')
+"""
 
 # for postback
 import dispatch 
