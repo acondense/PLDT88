@@ -185,17 +185,17 @@ def askMore_yes(recipient_id):
                         {
                             "type":"postback",
                             "title":"1-4",
-                            "payload": "1optionA"
+                            "payload": "optionA"
                         },
                         {
                             "type":"postback",
                             "title":"5-10",
-                            "payload":"1optionB"
+                            "payload":"optionB"
                         },
                         {
                             "type":"postback",
                             "title":"11 or more",
-                            "payload":"1optionC"
+                            "payload":"optionC"
                         }
                     ]
                 }
@@ -216,13 +216,13 @@ def askMore_no(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "Have a nice day!")
 
-def 1optionA(recipient_id):
+def optionA(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipeint_id, "I see. Thank you for your response. this conversation is automatically converted to a report. We are making it to the extent of our best to resolve your problem. Here is your file ticket number: " + strDate + ''.join(random.choice(string.ascii_uppercase) for _ in range(3)) + ". You may use it to track our response to this report.")
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "Thank you. Have a nice day!")
 
-def 1optionB(recipient_id):
+def optionB(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipeint_id, "I see. Thank you for your response but we think this is not a technical problem. You are currently subscribed to Fun Plan 699 which may not be reliable enough for approximately 5-10 devices")
     fbutil.send_bubbles(recipient_id)
@@ -233,7 +233,7 @@ def 1optionB(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "Thank you. Have a nice day!")
 
-def 1optionC(recipient_id):
+def optionC(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipeint_id, "I see. Thank you for your response but we think this is not a technical problem. You are currently subscribed to Speedstar Plan 1899 which may not be reliable enough for approximately 11 or more devices")
     fbutil.send_bubbles(recipient_id)
