@@ -15,7 +15,8 @@ action = {
     'troubleshootSlowConnection': actions.troubleshoot,
     'input.unknown': actions.unknown,
     'troubleshoot' : actions.troubleshoot,
-    'tagUser' : actions.tagUser
+    'tagUser' : actions.tagUser,
+    'smalltalk.greetings' : actions.default
 }
 
 # on button click
