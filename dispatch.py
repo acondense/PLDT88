@@ -36,5 +36,12 @@ postback = {
     'optionb' : postbacks.optionb,
     'optionc' : postbacks.optionc,
     'link' : postbacks.link,
-    'not_now': postbacks.not_now
+    'not_now': postbacks.not_now,
+    'survey': postbacks.survey,
+    'question1' : postbacks.question1,
+    'question2' : postbacks.question2,
+    'question3' : postbacks.question3,
+    'question4' : postbacks.question4,
+    'question5' : postbacks.question15,
+    'finish' : postbacks.finish
 }
