@@ -35,12 +35,12 @@ def welcome(recipient_id):
                         },
                         {
                             "type":"postback",
-                            "title":"No, but I would like to be",
+                            "title":"No, but I would like to",
                             "payload":"welcome_no"
                         },
                         {
                             "type":"postback",
-                            "title":"Answer PLDT customer survey.",
+                            "title":"Answer PLDT survey.",
                             "payload":"survey"
                         },
                     ]
