@@ -39,7 +39,7 @@ def set_welcome_text():
         "setting_type":"greeting",
         "greeting":{
             "text":"Hi {{user_first_name}}, I am the PLDT bot. Create to serve you."
-                }
+        }
     })
 
     r = requests.post("https://graph.facebook.com/v2.6/me/thread_settings", params=params, headers=headers, data=data)

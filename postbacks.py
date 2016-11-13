@@ -10,6 +10,7 @@ import json
 import datetime
 import random
 import string
+import requests
 
 #helper
 import fbutil
@@ -25,7 +26,7 @@ def welcome(recipient_id):
                 "type":"template",
                 "payload":{
                     "template_type":"button",
-                    "text":"Hi i am the PLDT bot I am created to enhance your customer experience. Are you an existing PLDT customer?",
+                    "text":"Hi I am the PLDT bot I am created to enhance your customer experience. Are you an existing PLDT customer?",
                     "buttons":[
                         {
                             "type":"postback",
@@ -49,9 +50,13 @@ def welcome_yes(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "Glad to know that you are a pldt customer")
     fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "For our convenience, may we ask for your current account number?")
+
+    """
     fbutil.send_message(recipient_id, "I am created to enhance your customer experience.")
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "You can ask me anything about PLDT")
+    """
 
 # postback if yes is clicked on welcome
 def welcome_no(recipient_id):
@@ -88,6 +93,36 @@ def promo_3(recipient_id):
     fbutil.send_link(recipient_id, "Apply now by following this link","https://shop.pldthome.com/Home/UlteraCoverageChecking?planId=1950", "Apply")
 
 def trblsht_yes(recipient_id):
+    fbutil.send_bubbles(recipient_id)
+    data = json.dumps({
+        "recipient": {
+            "id": recipient_id
+        },
+        "message":{
+            "attachment":{
+                "type":"template",
+                "payload":{
+                    "template_type":"button",
+                    "text":"Hmmm. It seems that something is wrong but can I ask something more?",
+                    "buttons":[
+                        {
+                            "type":"postback",
+                            "title":"Ok",
+                            "payload": "askMore_yes"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"No",
+                            "payload":"askMore_no"
+                        }
+                    ]
+                }
+            }
+        }
+    })
+    utils.post_messenger(data)
+    
+    """
     now = datetime.datetime.now()
     strDate = str(now.strftime("%Y%m%d"))
     output = "Thank you for reporting this. We are making it to the extent of our best to resolve your problem. Here is your file ticket number: " + strDate + ''.join(random.choice(string.ascii_uppercase) for _ in range(3))
@@ -99,7 +134,83 @@ def trblsht_yes(recipient_id):
     fbutil.send_message(recipient_id, output)
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "Have a nice day!")
+    """
 
 def trblsht_no(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "It seems that we don't have any problem with your connection anymore. Thank you for your participation.")
+
+def askMore_yes(recipient_id):
+    fbutil.send_bubbles(recipient_id)
+    data = json.dumps({
+        "recipient": {
+            "id": recipient_id
+        },
+        "message":{
+            "attachment":{
+                "type":"template",
+                "payload":{
+                    "template_type":"button",
+                    "text":"Approximately how many users are currently connected to your modem?",
+                    "buttons":[
+                        {
+                            "type":"postback",
+                            "title":"1-4",
+                            "payload": "1optionA"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"5-10",
+                            "payload":"1optionB"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"11 or more",
+                            "payload":"1optionC"
+                        }
+                    ]
+                }
+            }
+        }
+    })
+    utils.post_messenger(data)
+
+def askMore_no(recipient_id):
+    now = datetime.datetime.now()
+    strDate = str(now.strftime("%Y%m%d"))
+    output = "Ok then I guess we will just file this as a report. We are making it to the extent of our best to resolve your problem. Here is your file ticket number: " + strDate + ''.join(random.choice(string.ascii_uppercase) for _ in range(3))
+
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "I'm sorry to hear that. We are going record this report and give you file ticket number to track it.")
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, output)
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "Have a nice day!")
+
+def 1optionA(recipient_id):
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipeint_id, "I see. Thank you for your response. this conversation is automatically converted to a report. We are making it to the extent of our best to resolve your problem. Here is your file ticket number: " + strDate + ''.join(random.choice(string.ascii_uppercase) for _ in range(3)) + ". You may use it to track our response to this report.")
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "Thank you. Have a nice day!")
+
+def 1optionB(recipient_id):
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipeint_id, "I see. Thank you for your response but we think this is not a technical problem. You are currently subscribed to Fun Plan 699 which may not be reliable enough for approximately 5-10 devices")
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "What may I suggest is to for you to upgrade to Speedstar Plan 1899 to enjoy up to 10 MBPS and 50 GB monthly volume allowance.")
+    fbutil.send_message(recipient_id, "It also comes with a landline.")
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_link(recipient_id, "You may do this by following this link","https://shop.pldthome.com/Home/BufferPage?planId=1741&transaction=Upgrade&addOnId=-1", "Upgrade")
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "Thank you. Have a nice day!")
+
+def 1optionC(recipient_id):
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipeint_id, "I see. Thank you for your response but we think this is not a technical problem. You are currently subscribed to Speedstar Plan 1899 which may not be reliable enough for approximately 11 or more devices")
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "What may I suggest is to for you to upgrade to Power Plus Plan 2899 comes with up to 50 MBPS internet speed with no data cap.")
+    fbutil.send_message(recipient_id, "It also comes with iflix and FOX Networks Group.")
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_link(recipient_id, "You may do this by following this link","https://shop.pldthome.com/Home/BufferPage?planId=1637&transaction=Upgrade&addOnId=-1", "Upgrade")
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "Thank you. Have a nice day!")
