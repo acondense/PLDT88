@@ -67,8 +67,7 @@ def welcome_yes(recipient_id):
                     "text":"Would you like to link your PLDT Account with me?",
                     "buttons":[
                         {
-                            "type":"web_url",
-                            "url":"https://petersfancyapparel.com/criteria_selector",
+                            "type":"postback",
                             "title":"Yes, Link it",
                             "webview_height_ratio": "tall"
                         },
