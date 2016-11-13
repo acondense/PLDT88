@@ -30,5 +30,5 @@ postback = {
     'trblsht_yes' : postbacks.trblsht_yes,
     'trblsht_no' : postbacks.trblsht_no,
     'askMore_no' : postbacks.askMore_no,
-    'askMore_yes' : postbacks.askMore_yes
+    'askMore_yes' : postbacks.askMore_yes,
 }
