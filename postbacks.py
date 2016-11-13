@@ -304,7 +304,8 @@ def question5(recipient_id):
 
 def finish(recipient_id):
     fbutil.send_bubbles(recipient_id)
-    fbutil.send_message(recipient_id, "Thank you for your participation. Your answers are very much appreciated")
+
+    fbutil.send_message(recipient_id, "Thank you for your participation. If you wouldn't mind, Leaving us your comments or suggestions will very much appreciated.")
 
 #postback for promo_1
 def promo_1(recipient_id):
