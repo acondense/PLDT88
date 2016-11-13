@@ -40,7 +40,7 @@ def welcome(recipient_id):
                         },
                         {
                             "type":"postback",
-                            "title":"I would like to answer PLDT customer survey.",
+                            "title":"Answer PLDT customer survey.",
                             "payload":"survey"
                         },
                     ]
