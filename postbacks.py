@@ -89,6 +89,14 @@ def welcome_no(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "I will ask you some question to recommend the best pldt product that will suite you.")
 
+def link(recipient_id):
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "Please give me your account number")
+
+def not_now(recipient_id):
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "Oh okay :)")
+
 #postback for promo_1
 def promo_1(recipient_id):
     fbutil.send_bubbles(recipient_id)
@@ -241,10 +249,3 @@ def optionc(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "Thank you. Have a nice day!")
 
-def link(recipient_id):
-    fbutil.send_bubbles(recipient_id)
-    fbutil.send_message(recipient_id, "Please give me your account number")
-
-def not_now(recipient_id):
-    fbutil.send_bubbles(recipient_id)
-    fbutil.send_message(recipient_id, "Oh okay :)")
