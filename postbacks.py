@@ -247,3 +247,5 @@ def tall(recipient_id):
     fbutil.send_message(recipient_id, "Please give me your account number")
 
 def not_now(recipient_id):
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "Oh okay :)")
