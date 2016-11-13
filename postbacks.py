@@ -69,7 +69,7 @@ def welcome_yes(recipient_id):
                         {
                             "type":"postback",
                             "title":"Yes, Link it",
-                            "webview_height_ratio": "tall"
+                            "payload":"link"
                         },
                         {
                             "type":"postback",
@@ -241,7 +241,7 @@ def optionc(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "Thank you. Have a nice day!")
 
-def tall(recipient_id):
+def link(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "Please give me your account number")
 
