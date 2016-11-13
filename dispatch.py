@@ -16,7 +16,8 @@ action = {
     'input.unknown': actions.unknown,
     'troubleshoot' : actions.troubleshoot,
     'tagUser' : actions.tagUser,
-    'smalltalk.greetings' : actions.default
+    'smalltalk.greetings' : actions.default,
+    'smalltalk.appraisal' : actions.default
 }
 
 # on button click
@@ -33,5 +34,7 @@ postback = {
     'askMore_yes' : postbacks.askMore_yes,
     'optiona' : postbacks.optiona,
     'optionb' : postbacks.optionb,
-    'optionc' : postbacks.optionc
+    'optionc' : postbacks.optionc,
+    'link' : postbacks.link,
+    'not_now': postbacks.not_now
 }
