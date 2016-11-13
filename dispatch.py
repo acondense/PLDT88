@@ -31,4 +31,7 @@ postback = {
     'trblsht_no' : postbacks.trblsht_no,
     'askMore_no' : postbacks.askMore_no,
     'askMore_yes' : postbacks.askMore_yes,
+    'optionA' : postbacks.optionA,
+    'optionB' : postbacks.optionB,
+    'optionC' : postbacks.optionC
 }
