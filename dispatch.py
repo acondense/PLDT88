@@ -16,7 +16,9 @@ action = {
     'input.unknown': actions.unknown,
     'troubleshoot' : actions.troubleshoot,
     'tagUser' : actions.tagUser,
-    'smalltalk.greetings' : actions.default
+    'smalltalk.greetings' : actions.default,
+    'askMore_no' : actions.askMore_no,
+    'askMore_yes' : acrions.askMore_yes
 }
 
 # on button click
