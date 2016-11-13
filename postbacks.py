@@ -113,7 +113,7 @@ def survey(recipient_id):
                 "type":"template",
                 "payload":{
                     "template_type":"button",
-                    "text":"Welcome to PLDT customer survey. Please rate each item from 1-5 where 10 is the highest. Shall we?",
+                    "text":"Welcome to PLDT customer survey. Please rate each item from 1-3 where 3 is the highest. Shall we?",
                     "buttons":[
                         {
                             "type":"postback",
@@ -154,17 +154,7 @@ def question1(recipient_id):
                             "type":"postback",
                             "title":"3",
                             "payload": "question2"
-                        },
-                        {
-                            "type":"postback",
-                            "title":"4",
-                            "payload": "question2"
-                        },
-                        {
-                            "type":"postback",
-                            "title":"5",
-                            "payload": "question2"
-                        },
+                        }
                     ]
                 }
             }
@@ -199,17 +189,7 @@ def question2(recipient_id):
                             "type":"postback",
                             "title":"3",
                             "payload": "question3"
-                        },
-                        {
-                            "type":"postback",
-                            "title":"4",
-                            "payload": "question3"
-                        },
-                        {
-                            "type":"postback",
-                            "title":"5",
-                            "payload": "question3"
-                        },
+                        }
                     ]
                 }
             }
@@ -244,17 +224,7 @@ def question3(recipient_id):
                             "type":"postback",
                             "title":"3",
                             "payload": "question4"
-                        },
-                        {
-                            "type":"postback",
-                            "title":"4",
-                            "payload": "question4"
-                        },
-                        {
-                            "type":"postback",
-                            "title":"5",
-                            "payload": "question4"
-                        },
+                        }
                     ]
                 }
             }
@@ -289,17 +259,7 @@ def question4(recipient_id):
                             "type":"postback",
                             "title":"3",
                             "payload": "question5"
-                        },
-                        {
-                            "type":"postback",
-                            "title":"4",
-                            "payload": "question5"
-                        },
-                        {
-                            "type":"postback",
-                            "title":"5",
-                            "payload": "question5"
-                        },
+                        }
                     ]
                 }
             }
@@ -334,17 +294,7 @@ def question5(recipient_id):
                             "type":"postback",
                             "title":"3",
                             "payload": "finish"
-                        },
-                        {
-                            "type":"postback",
-                            "title":"4",
-                            "payload": "finish"
-                        },
-                        {
-                            "type":"postback",
-                            "title":"5",
-                            "payload": "finish"
-                        },
+                        }
                     ]
                 }
             }
