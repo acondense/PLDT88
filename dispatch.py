@@ -16,9 +16,7 @@ action = {
     'input.unknown': actions.unknown,
     'troubleshoot' : actions.troubleshoot,
     'tagUser' : actions.tagUser,
-    'smalltalk.greetings' : actions.default,
-    'askMore_no' : actions.askMore_no,
-    'askMore_yes' : acrions.askMore_yes
+    'smalltalk.greetings' : actions.default
 }
 
 # on button click
@@ -30,5 +28,7 @@ postback = {
     'promo_2' : postbacks.promo_2,
     'promo_3' : postbacks.promo_3,
     'trblsht_yes' : postbacks.trblsht_yes,
-    'trblsht_no' : postbacks.trblsht_no
+    'trblsht_no' : postbacks.trblsht_no,
+    'askMore_no' : postbacks.askMore_no,
+    'askMore_yes' : postbacks.askMore_yes
 }
