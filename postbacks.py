@@ -37,7 +37,12 @@ def welcome(recipient_id):
                             "type":"postback",
                             "title":"No, but I would like to be",
                             "payload":"welcome_no"
-                        }
+                        },
+                        {
+                            "type":"postback",
+                            "title":"I would like to answer PLDT customer survey.",
+                            "payload":"survey"
+                        },
                     ]
                 }
             }
@@ -96,6 +101,260 @@ def link(recipient_id):
 def not_now(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "Oh okay :)")
+
+def survey(recipient_id):
+    fbutil.send_bubbles(recipient_id)
+    data = json.dumps({
+        "recipient": {
+            "id": recipient_id
+        },
+        "message":{
+            "attachment":{
+                "type":"template",
+                "payload":{
+                    "template_type":"button",
+                    "text":"Welcome to PLDT customer survey. Please rate each item from 1-5 where 10 is the highest. Shall we?",
+                    "buttons":[
+                        {
+                            "type":"postback",
+                            "title":"Okay",
+                            "payload": "question1"
+                        }
+                    ]
+                }
+            }
+        }
+    })
+    utils.post_messenger(data)
+
+def question1(recipient_id):
+    fbutil.send_bubbles(recipient_id)
+    data = json.dumps({
+        "recipient": {
+            "id": recipient_id
+        },
+        "message":{
+            "attachment":{
+                "type":"template",
+                "payload":{
+                    "template_type":"button",
+                    "text":"How was your experience with the service of PLDT?",
+                    "buttons":[
+                        {
+                            "type":"postback",
+                            "title":"1",
+                            "payload": "question2"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"2",
+                            "payload": "question2"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"3",
+                            "payload": "question2"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"4",
+                            "payload": "question2"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"5",
+                            "payload": "question2"
+                        },
+                    ]
+                }
+            }
+        }
+    })
+    utils.post_messenger(data)
+
+def question2(recipient_id):
+    fbutil.send_bubbles(recipient_id)
+    data = json.dumps({
+        "recipient": {
+            "id": recipient_id
+        },
+        "message":{
+            "attachment":{
+                "type":"template",
+                "payload":{
+                    "template_type":"button",
+                    "text":"How will you rate our personnels?",
+                    "buttons":[
+                        {
+                            "type":"postback",
+                            "title":"1",
+                            "payload": "question3"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"2",
+                            "payload": "question3"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"3",
+                            "payload": "question3"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"4",
+                            "payload": "question3"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"5",
+                            "payload": "question3"
+                        },
+                    ]
+                }
+            }
+        }
+    })
+    utils.post_messenger(data)
+
+def question3(recipient_id):
+    fbutil.send_bubbles(recipient_id)
+    data = json.dumps({
+        "recipient": {
+            "id": recipient_id
+        },
+        "message":{
+            "attachment":{
+                "type":"template",
+                "payload":{
+                    "template_type":"button",
+                    "text":"How likely are you to recommend us to a friend?",
+                    "buttons":[
+                        {
+                            "type":"postback",
+                            "title":"1",
+                            "payload": "question4"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"2",
+                            "payload": "question4"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"3",
+                            "payload": "question4"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"4",
+                            "payload": "question4"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"5",
+                            "payload": "question4"
+                        },
+                    ]
+                }
+            }
+        }
+    })
+    utils.post_messenger(data)
+
+def question4(recipient_id):
+    fbutil.send_bubbles(recipient_id)
+     data = json.dumps({
+        "recipient": {
+            "id": recipient_id
+        },
+        "message":{
+            "attachment":{
+                "type":"template",
+                "payload":{
+                    "template_type":"button",
+                    "text":"How reliable do you find our service?",
+                    "buttons":[
+                        {
+                            "type":"postback",
+                            "title":"1",
+                            "payload": "question5"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"2",
+                            "payload": "question5"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"3",
+                            "payload": "question5"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"4",
+                            "payload": "question5"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"5",
+                            "payload": "question5"
+                        },
+                    ]
+                }
+            }
+        }
+    })
+    utils.post_messenger(data)
+
+def question5(recipient_id):
+    fbutil.send_bubbles(recipient_id)
+    data = json.dumps({
+        "recipient": {
+            "id": recipient_id
+        },
+        "message":{
+            "attachment":{
+                "type":"template",
+                "payload":{
+                    "template_type":"button",
+                    "text":"How do you find me helpful?",
+                    "buttons":[
+                        {
+                            "type":"postback",
+                            "title":"1",
+                            "payload": "finish"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"2",
+                            "payload": "finish"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"3",
+                            "payload": "finish"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"4",
+                            "payload": "finish"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"5",
+                            "payload": "finish"
+                        },
+                    ]
+                }
+            }
+        }
+    })
+    utils.post_messenger(data)
+
+def finish(recipient_id):
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "Thank you for your participation. Your answers are very much appreciated")
 
 #postback for promo_1
 def promo_1(recipient_id):
