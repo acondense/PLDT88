@@ -49,8 +49,6 @@ def welcome(recipient_id):
 def welcome_yes(recipient_id):
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "Glad to know that you are a pldt customer")
-    fbutil.send_bubbles(recipient_id)
-    fbutil.send_message(recipient_id, "For our convenience, may we ask for your current account number?")
 
     """
     fbutil.send_message(recipient_id, "I am created to enhance your customer experience.")
@@ -243,3 +241,9 @@ def optionc(recipient_id):
     fbutil.send_link(recipient_id, "You may do this by following this link","https://shop.pldthome.com/Home/BufferPage?planId=1637&transaction=Upgrade&addOnId=-1", "Upgrade")
     fbutil.send_bubbles(recipient_id)
     fbutil.send_message(recipient_id, "Thank you. Have a nice day!")
+
+def tall(recipient_id):
+    fbutil.send_bubbles(recipient_id)
+    fbutil.send_message(recipient_id, "Please give me your account number")
+
+def not_now(recipient_id):
