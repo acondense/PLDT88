@@ -240,6 +240,6 @@ def optionc(recipient_id):
     fbutil.send_message(recipient_id, "What may I suggest is to for you to upgrade to Power Plus Plan 2899 comes with up to 50 MBPS internet speed with no data cap.")
     fbutil.send_message(recipient_id, "It also comes with iflix and FOX Networks Group.")
     fbutil.send_bubbles(recipient_id)
-    fbutil.send_link(recipient_id, "You may do this by following this link","https://shop.pldthome.com/Home/BufferPage?planId=1637&transaction=Upgrade&addOnId=-1", "Upgrade")
+    fbutil.send_link(recipient_id,"You may do this by following this link","https://shop.pldthome.com/Home/BufferPage?planId=1637&transaction=Upgrade&addOnId=-1", "Upgrade")
     fbutil.send_bubbles(recipient_id)
-    fbutil.send_message(recipient_id, "Thank you. Have a nice day!")
+    fbutil.send_message(recipient_id,"Thank you. Have a nice day!")
